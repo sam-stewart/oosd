@@ -22,13 +22,11 @@ class MySet:
 
     def is_empty(self):
         """Returns True is the set has no members."""
-        if not self.my_set:
-            return True
+        return not self.my_set
 
     def has_item(self, item):
         """returns True if item is in the set, False otherwise."""
-        if item in self.my_set:
-            return True
+        return item in self.my_set
 
     def intersection(self, otherset):
         """Returns a new set that is the intersection of self
