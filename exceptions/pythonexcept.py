@@ -11,5 +11,6 @@ def oops():
 
 try:
     oops()
+
 except MyError as e:
     print("Index error raised in except clause\n" + str(e))
