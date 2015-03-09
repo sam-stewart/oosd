@@ -43,7 +43,23 @@ class TestMySet(unittest.TestCase):
         self.assertItemsEqual(self.test_set.union(self.union_set),
             self.expected_set)
 
-    
+    def test_subset_of(self):
+        self.true_set = [2, 3, 4, 5, 6, 7, 8, 34, 34]
+        self.false_set = [1, 2, 3]
+        self.assertTrue(self.test_set.is_subset_of(self.true_set))
+        self.assertFalse(self.test_set.is_subset_of(self.false_set))
+
+    def test_equal_to(self):
+        self.true_set = [2, 3, 4, 5, 6, 7, 8]
+        self.false_set = [2, 3, 4, 5, 6, 7, 8, 9]
+        self.assertTrue(self.test_set.is_equal_to(self.true_set))
+        self.assertFalse(self.test_set.is_equal_to(self.false_set))
+
+    def test_proper_subset(self): 
+        self.true_set = [2, 3, 4, 5, 6, 7, 8, 9]
+        self.false_set = [2, 3, 4, 5, 6, 7, 8]
+        self.assertTrue(self.test_set.is_proper_subset_of(self.true_set))
+        self.assertFalse(self.test_set.is_proper_subset_of(self.false_set))
 
 if __name__ == '__main__':
     unittest.main()

@@ -47,12 +47,15 @@ class MySet:
         """Returns True if self and otherset are equal, i.e.,
            they have the exact same members.
         """
-        return len([x for x in otherset if x in self.my_set]) == len(self.my_set)
+        return len([x for x in self.my_set if x in otherset]) == len(otherset);
         
 
     def is_proper_subset_of(self, otherset):
         """Returns True is self is a *proper* subset of otherset."""
-        self.proper_sub_set = [x for x in self.my_set if x in otherset]
-        return (len(self.proper_sub_set) == len(self.my_set) and 
-            len(self.proper_sub_set) < len(otherset))
+        # Fails if set passed in with two identical values that is a
+        # subset. Get the subset, if len is same as my_set and less
+        # then supplied otherset, true.
+        self.sub_set = [x for x in self.my_set if x in otherset]
+        return (len(self.sub_set) == len(self.my_set) and 
+                len(self.sub_set) < len(otherset))
 
