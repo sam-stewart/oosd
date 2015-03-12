@@ -10,9 +10,6 @@ class Dealer(player.Player):
 
     def deal_card(self, player):
         player.take_card(self.deck_of_cards.get_card())
-
-    def take_card(self):
-        self.hand_of_cards.append(self.deck_of_cards.get_card())
                 
     def shuffle_deck(self):
         self.deck_of_cards.shuffle()

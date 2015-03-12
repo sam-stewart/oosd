@@ -1,12 +1,10 @@
-import hand
-
 class Player:
 
     def __init__(self):
         self.hand_of_cards = []
 
     def take_card(self, card):
-        self.hand_of_cards.append(card)
+        self.strategy.take_card(self, card)
     
     def show_hand(self):
         card_string = ""

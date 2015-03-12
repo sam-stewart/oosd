@@ -1,12 +1,23 @@
 import player
 import dealer
 import sys
+import gamestate
+import strategy
+from playercheatstrategy import PlayerCheatStrategy
+from nostrategy import NoStrategy
+
 
 bj_dealer = dealer.Dealer()
 bj_player = player.Player()
 
-bj_dealer.take_card()
-bj_dealer.take_card()
+game_state = gamestate.GameState(bj_player, bj_dealer, 
+        bj_dealer.deck_of_cards)
+
+bj_player.strategy = PlayerCheatStrategy(game_state)
+bj_dealer.strategy = NoStrategy(game_state)
+
+bj_dealer.deal_card(bj_dealer)
+bj_dealer.deal_card(bj_dealer)
 
 bj_dealer.deal_card(bj_player)
 bj_dealer.deal_card(bj_player)
@@ -27,7 +38,7 @@ while raw_input("h to hit or s to stand: ") == 'h':
 print("Dealer's hand: \n" + bj_dealer.show_hand())
 
 while bj_dealer.get_score() < 17:
-    bj_dealer.take_card()
+    bj_dealer.deal_card(bj_dealer)
     score = bj_dealer.get_score()
     print("Dealer's hand: \n" + bj_dealer.show_hand())
     print("Dealer score: " + str(score) + "\n")
