@@ -2,9 +2,13 @@ class Player:
 
     def __init__(self):
         self.hand_of_cards = []
+        self.hand_is_hard = True 
 
     def take_card(self, card):
-        self.strategy.take_card(self, card)
+        self.hand_of_cards.append(card);
+
+    def hit(self):
+        return self.strategy.hit()
     
     def show_hand(self):
         card_string = ""
@@ -27,8 +31,10 @@ class Player:
         for ace in ace_array:
             if(score < 11):
                 score += 11
+                self.hand_is_hard = False
             else:
                 score += 1
+                self.hand_is_hard = True
         return score;
                 
             

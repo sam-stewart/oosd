@@ -4,10 +4,7 @@ from strategy import Strategy
 class PlayerCheatStrategy(Strategy):
 
     """ Basic cheat strat, show the next card in deck """
-    def __init__(self, game_state):
-        self.game_state = game_state
-
-    def take_card(self, player, card):
-        player.hand_of_cards.append(card)
+    def hit(self):
         print("Next card: " + str(self.game_state.deck.cards[-1]))
+        return raw_input("h to hit or s to stand: ") == 'h'
 
