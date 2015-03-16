@@ -10,8 +10,8 @@ def build_dict(deck):
     res_dict = {str(x):[0]*52 for x in deck.cards}
     for i in range(520):
         deck.shuffle()
-        for i in range(len(deck.cards)):
-            res_dict[str(deck.cards[i])][i] += 1
+        for j in range(len(deck.cards)):
+            res_dict[str(deck.cards[j])][j] += 1
     return res_dict
 
 def chi_square(res_dict):
