@@ -2,7 +2,6 @@ from math import pow
 from shufflestrategy import RandomShuffleStrategy, AppendShuffleStrategy, EvenOddShuffleStrategy
 from deck import Deck
 
-
 strats_dict = {"Random class shuffle": Deck(RandomShuffleStrategy()),
           "Append shuffle" : Deck(AppendShuffleStrategy()),
           "Even odd shuffle strat" : Deck(EvenOddShuffleStrategy())}
@@ -24,5 +23,3 @@ def chi_square(res_dict):
 
 for strat_name, deck in strats_dict.iteritems():
     print strat_name + ": " + str(chi_square(build_dict(deck)))
-
-

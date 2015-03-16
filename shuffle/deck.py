@@ -20,5 +20,3 @@ class Deck:
 
     def shuffle(self):
         self.strategy.shuffle(self.cards)
-                
-

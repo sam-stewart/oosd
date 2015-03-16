@@ -15,5 +15,3 @@ class Card:
 
     def __repr__(self):
         return str(self.value) + " of " + Card.suits[self.suit]
-
-    
