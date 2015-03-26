@@ -13,8 +13,8 @@ class AbstractContactFactory(object):
 
 class UkContactFactory(AbstractContactFactory):
 
-    def create_phone_number(self):
-        pass
+    def create_phone_number(self, area_code, prefix, number):
+        return ukphonenumber.UkPhoneNumber(area_code, prefix, number)
 
     def create_address(self):
         pass

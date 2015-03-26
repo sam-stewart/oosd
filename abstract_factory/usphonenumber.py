@@ -12,30 +12,30 @@ class UsPhoneNumber(AbstractPhoneNumber):
 
     @property
     def area_code(self):
-        return self.__area_code
+        return self._area_code
 
     @area_code.setter
     def area_code(self, area_code):
         if len(area_code) != 3:
             raise ValueError("Area code needs to be 3 digits long")
-        self.__area_code = area_code
+        self._area_code = area_code
 
     @property
     def prefix(self):
-        return self.__prefix
+        return self._prefix
 
     @prefix.setter
     def prefix(self, prefix):
        if len(prefix) != 3:
            raise ValueError("Prefix needs to be 3 digits long")
-       self.__prefix = prefix
+       self._prefix = prefix
 
     @property
     def number(self):
-        return self.__number
+        return self._number
 
     @number.setter
     def number(self, number):
-        if len(str(number)) != 4:
+        if len(number) != 4:
             raise ValueError("Number needs to be 4 digits long")
-        self.__number = number
+        self._number = number
