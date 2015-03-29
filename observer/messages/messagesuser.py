@@ -1,18 +1,13 @@
-class Bicycle(object):
+class User(object):
 
     def __init__(self):
         self.observers = []
-        self.rpms = 0
+        self.messages = []
 
-    @property
-    def rpms(self):
-        return _rpms
-
-    @rpms.setter
-    def rpms(self, value):
-        self._rpms = value
+    def update(self, msg):
+        self.messages.append(msg)
         self.notify_observers()
-        
+
     def add_observer(self, o):
         self.observers.append(o)
 
@@ -21,4 +16,7 @@ class Bicycle(object):
 
     def notify_observers(self):
         for o in self.observers:
-            o.update(self._rpms)
+            # Update observers with last added message
+            o.update(self.messages[-1])
+
+
