@@ -24,8 +24,9 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
     def update(self):
         msg = self.txtedit_input.toPlainText()
         self.txtedit_input.clear()
-        self.input_user.update(msg)
+        self.input_user.post_message(msg)
 
+        # Should be listeners attached to Qt text browsers.
         self.txtbrowser_one.append(msg)
         self.txtbrowser_two.append(msg)
 
