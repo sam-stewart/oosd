@@ -27,8 +27,8 @@ class MyApp(QtGui.QMainWindow, Ui_MainWindow):
         self.input_user.post_message(msg)
 
         # Should be listeners attached to Qt text browsers.
-        self.txtbrowser_one.append(msg)
-        self.txtbrowser_two.append(msg)
+        self.txtbrowser_one.append(self.user1.observed_messages[-1])
+        self.txtbrowser_two.append(self.user1.observed_messages[-1])
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
