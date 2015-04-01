@@ -16,8 +16,10 @@ class UkContactFactory(AbstractContactFactory):
     def create_phone_number(self, area_code, prefix, number):
         return ukphonenumber.UkPhoneNumber(area_code, prefix, number)
 
-    def create_address(self):
-        pass
+    def create_address(self, recipient, org, building, address, 
+            locality, city, post_code):
+        return ukaddress.UkAddress(recipient, org, building, address,
+                locality, city, post_code)
 
 class UsContactFactory(AbstractContactFactory):
     
