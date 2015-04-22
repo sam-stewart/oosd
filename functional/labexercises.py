@@ -1,16 +1,17 @@
 # Lambda expression exercises (lab 8.1)
 # File conventions: c is a character, st is a string, l is a list.
+# Some functions have outer lambdas to accept arguments, some do not.
 
 #1 Computes factorials from a list
-def factorial(l):
-    return reduce(lambda x, y : x * y, l)
+factorial = lambda i : reduce(lambda x, y : x * y, range(1, i+1))
 
 #2 Function takes a string, and a char, returns new string without chars.
 remove_char = lambda c, st : filter(lambda x : x != c, st)
 
 #3 Returns number of occurences of char in string
 def occurences(c, st):
-    return len(filter(lambda x : x != c, st))
+    s = filter(lambda x : x == c, st)
+    return reduce(lambda x, y: x + 1, s, 0)
 
 #4 Counts words in string beginning with char c.
 def count_words(c, st):
