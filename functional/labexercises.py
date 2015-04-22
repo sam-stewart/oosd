@@ -17,6 +17,10 @@ def occurences(c, st):
 def count_words(c, st):
     return len(filter(lambda x : x.startswith(c), st.split()))
 
+#5 Switch all occurences of lower case char (c) in string (st) with uppercase
+def uppercase(c, st):
+    return ''.join(map(lambda x: x.upper() if x == c else x, st))
+
 #6 version of map() using a loop (map takes a function and a list)
 def mymap_loop(f, l):
     retlist = []
