@@ -4,12 +4,13 @@ from math import sqrt
 def fib_cheat(n):
     return ((1 + sqrt(5))**n - (1 - sqrt(5))**n) / (2**n * sqrt(5))
 
-# Recursion play.
-def fib(n, a=0, b=1, c=0):
-    if c >= n:
-        return a
+# Recursion play. Return nth fibonacci number
+def fib(n, a=0, b=1, c=2):
+    if c > n:
+        return b
     return fib(n, b, b+a, c+1)
 
+# Memoisation and recursion, return nth fibonacci number
 def fib_memo():
     l = [0,1]
     def fib(n):
