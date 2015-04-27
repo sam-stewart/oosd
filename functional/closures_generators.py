@@ -10,7 +10,8 @@ def fib(n, a=0, b=1, c=2):
         return b
     return fib(n, b, b+a, c+1)
 
-# Memoisation and recursion, return nth fibonacci number
+# Memoisation and recursion, return nth fibonacci number.
+# Maintain a list this time, speed up future lookups
 def fib_memo():
     l = [0,1]
     def fib(n):
