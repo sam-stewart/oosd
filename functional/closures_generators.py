@@ -45,16 +45,11 @@ def is_prime(n):
         return False
     if n == 1:
         return True
-    for i in range (2, int(sqrt(n))):
+    for i in range (2, int(sqrt(n)+1)):
+        print str(n) + "%" + str(i) 
         if n % i == 0:
             return False
     return True
-
-prime_gen = get_primes(20)
-
-for i in prime_gen:
-    print i
-
 
 
 
