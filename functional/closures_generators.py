@@ -24,5 +24,40 @@ def fib_memo():
 
 fib_closure = fib_memo()
 
-print fib_closure(5)
-print fib(5)
+# Tom's prime implementation - returns primes up to N
+def primes(n):
+    if n == 0:
+        return []
+    elif n == 1:
+        return [1]
+    else:
+        p = primes(int(sqrt(n)))
+        no_p = {j for i in p for j in range(i*2, n, i)}
+        p = {x for x in range(2, n) if x not in no_p}
+        return p
+
+# Re-implement prime as generator
+def get_primes(n):
+    for i in range(0, n):
+        if is_prime(i):
+            yield i
+
+def is_prime(n):
+    if n > 0 and n < 4:
+        return True
+    elif n % 2 == 0:
+        return False 
+    for i in range (3, int(sqrt(n)+1)):
+        if n % i == 0:
+            return False
+    return True
+
+prime_gen = get_primes(20)
+
+for i in prime_gen:
+    print i
+
+
+
+
+
