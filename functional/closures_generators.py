@@ -1,7 +1,7 @@
 from math import sqrt
 
 # Formula from wolfram alpha
-def fib_cheat(n):
+def fib_wolfram(n):
     return ((1 + sqrt(5))**n - (1 - sqrt(5))**n) / (2**n * sqrt(5))
 
 # Recursion play. Return nth fibonacci number
@@ -22,8 +22,6 @@ def fib_memo():
             return fib(n)
     return fib
 
-fib_closure = fib_memo()
-
 # Tom's prime implementation - returns primes up to N
 def primes(n):
     if n == 0:
@@ -43,11 +41,11 @@ def get_primes(n):
             yield i
 
 def is_prime(n):
-    if n > 0 and n < 4:
+    if n == 0:
+        return False
+    if n == 1:
         return True
-    elif n % 2 == 0:
-        return False 
-    for i in range (3, int(sqrt(n)+1)):
+    for i in range (2, int(sqrt(n)+1)):
         if n % i == 0:
             return False
     return True
