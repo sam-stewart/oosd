@@ -1,0 +1,34 @@
+<?xml version = "1.0"?>
+
+<student id="11005725" firstname="Sam" lastname="Stewart"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="student.xsd">
+    <course id="in700002" startdate="2015-07-20" enddate="2015-11-20">
+        <title>Project 2</title>
+        <description>Fun times</description>
+    </course>
+    <course id="in705001" startdate="2015-07-20" enddate="2015-11-20">
+        <title>Databases 3</title>
+        <description>New machine learning stuff</description>
+    </course>
+    <course id="in711001" startdate="2015-07-20" enddate="2015-11-20">
+        <title>Algorithms and Data Structures</title>
+        <description>Cool things</description>
+    </course>
+    <course id="in700001" startdate="2015-02-16" enddate="2015-06-26">
+        <title>Project 1</title>
+        <description>Sam Mann's holiday time</description>
+    </course>
+    <course id="in710001" startdate="2015-02-16" enddate="2015-06-26">
+        <title>OO Systems Development</title>
+        <description>Gang of four</description>
+    </course>
+    <course id="in719001" startdate="2015-02-16" enddate="2015-06-26">
+        <title>Systems Administration</title>
+        <description>Puppet heaven</description>
+    </course>
+    <course id="in721000" startdate="2015-02-16" enddate="2015-06-26">
+        <title>Mobile Development</title>
+        <description>Design and development of applications for mobile devices</description>
+    </course>
+</student>
