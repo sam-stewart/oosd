@@ -3,8 +3,8 @@ import parser
 
 class XmlParser(parser.Parser):
 
-    @classmethod
-    def parse(self, doc):
+    @staticmethod
+    def parse(doc):
         return xmltodict.parse(doc, xml_attribs=True)
         
 

@@ -1,17 +1,18 @@
 import unittest
-from script import getdictfromxml
-from script import getdictfromjson
+from dictfactory import DictFactory
 
 class TestDoc(unittest.TestCase):
 
     def setUp(self):
-        self.jsonfile = open('student.json', 'r')
-        self.xmlfile = open('student.xml', 'r')
-        self.maxDiff = None
+        with open('student.json') as j:
+            self.jsonstr = j.read()
+
+        with open('student.xml') as x:
+            self.xmlstr = x.read()
 
     def test_equal(self):
-        self.xmldict = getdictfromxml(self.xmlfile)
-        self.jsondict = getdictfromjson(self.jsonfile)
+        self.xmldict = DictFactory.parse(self.xmlstr)
+        self.jsondict = DictFactory.parse(self.jsonstr)
         self.assertDictEqual(self.xmldict, self.jsondict)
 
 if __name__ == '__main__':

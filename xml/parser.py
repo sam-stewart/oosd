@@ -1,5 +1,5 @@
 class Parser(object):
 
-    @classmethod
-    def parse(self, docstring):
+    @staticmethod
+    def parse(doc):
         raise NotImplementedError()
