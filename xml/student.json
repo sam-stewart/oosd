@@ -1,57 +1,60 @@
 {
-  "id": 11005725,
-  "firstname": "Sam",
-  "lastname": "Stewart",
-  "course": [
-    {
-      "id": "in700002",
-      "startdate": "2015-07-20",
-      "enddate": "2015-11-20",
-      "title": "Project 2",
-      "description": "Fun Times"
-    },
-    {
-      "id": "in705001",
-      "startdate": "2015-07-20",
-      "enddate": "2015-11-20",
-      "title": "Databases 3",
-      "description": "New machine learning stuff"
-    },
-    {
-      "id": "in711001",
-      "startdate": "2015-07-20",
-      "enddate": "2015-11-20",
-      "title": "Algorithms and Data Structures",
-      "description": "Cool things"
-    },
-    {
-      "id": "in700001",
-      "startdate": "2015-02-16",
-      "enddate": "2015-06-26",
-      "title": "Project 1",
-      "description": "Sam Mann's holiday time"
-    },
-    {
-      "id": "in710001",
-      "startdate": "2015-02-16",
-      "enddate": "2015-06-26",
-      "title": "OO Systems Development",
-      "description": "Gang of four"
-    },
-    {
-      "id": "in719001",
-      "startdate": "2015-02-16",
-      "enddate": "2015-06-26",
-      "title": "Systems Administration",
-      "description": "Puppet heaven"
-    },
-    {
-      "id": "in721000",
-      "startdate": "2015-02-16",
-      "enddate": "2015-06-26",
-      "title": "Mobile Development",
-      "description": "Design and development of applications for mobile devices"
-    }
-  ]
+  "student":
+  {
+    "id": "11005725",
+    "firstname": "Sam",
+    "lastname": "Stewart",
+    "course": [
+      {
+        "id": "in700002",
+        "startdate": "2015-07-20",
+        "enddate": "2015-11-20",
+        "title": "Project 2",
+        "description": "Fun times"
+      },
+      {
+        "id": "in705001",
+        "startdate": "2015-07-20",
+        "enddate": "2015-11-20",
+        "title": "Databases 3",
+        "description": "New machine learning stuff"
+      },
+      {
+        "id": "in711001",
+        "startdate": "2015-07-20",
+        "enddate": "2015-11-20",
+        "title": "Algorithms and Data Structures",
+        "description": "Cool things"
+      },
+      {
+        "id": "in700001",
+        "startdate": "2015-02-16",
+        "enddate": "2015-06-26",
+        "title": "Project 1",
+        "description": "Sam Mann's holiday time"
+      },
+      {
+        "id": "in710001",
+        "startdate": "2015-02-16",
+        "enddate": "2015-06-26",
+        "title": "OO Systems Development",
+        "description": "Gang of four"
+      },
+      {
+        "id": "in719001",
+        "startdate": "2015-02-16",
+        "enddate": "2015-06-26",
+        "title": "Systems Administration",
+        "description": "Puppet heaven"
+      },
+      {
+        "id": "in721000",
+        "startdate": "2015-02-16",
+        "enddate": "2015-06-26",
+        "title": "Mobile Development",
+        "description": "Design and development of applications for mobile devices"
+      }
+    ]
+  }
 }
 
