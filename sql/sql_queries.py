@@ -10,29 +10,34 @@ s = DBSession()
 
 # Print all student
 print "###### STUDENTS ######"
-q = s.query(Person).join(Student).all()
-for r in q:
-    print r.first_name + " " + r.last_name
 
-# Print all papers
-print "###### PAPERS ######"
-q = s.query(Course).all()
-for r in q:
-    print r.title, r.desc
+for p, st in s.query(Person, Student):
+    print p.first_name, p.last_name, st.student_id
+
+print "##### PAPERS + LECTURER #####"
+
+for c, l, p in s.query(Course, Lecturer, Person).\
+        filter(Course.lecturer_id == Lecturer.id).all():
+    print c.title, c.desc, p.first_name, p.last_name
 
 # Get OOSD paper, print some stuff, print students.
 print "#### OOSD, STUDENTS #####"
+
 q = s.query(Course).filter(Course.id == "in710001").one()
 print q.title, q.desc
 for r in q.students:
     print r.first_name + " " + r.last_name
 
-# Select a student (me) print schedule for semester
+# Joins to assoc, joins to student, filters by semester and student_id.
 print "##### STUDENT SCHEDULE #####"
-q = s.query(Student).filter(Student.student_id == 11005725).one()
-courses = q.courses
-for r in courses:
-    print r.title
-    for i in r.lectures:
-        print i.day + " " + i.time
 
+q = s.query(Course).join(StudentCourse).\
+        join(Student).\
+        filter(Student.student_id == 11005725).\
+        filter(Course.semester == 1).\
+        all()
+
+for c in q:
+    print c.title
+    for l in c.lectures:
+        print l.day + " " + l.time + " " + l.class_room
