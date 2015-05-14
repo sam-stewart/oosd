@@ -26,7 +26,7 @@ print "#### OOSD, STUDENTS #####"
 q = s.query(Course).filter(Course.id == "in710001").one()
 print q.title, q.desc
 for r in q.students:
-    print r.first_name + " " + r.last_name
+    print r.first_name, r.last_name
 
 # Joins to assoc, joins to student, filters by semester and student_id.
 print "##### STUDENT SCHEDULE #####"

@@ -30,6 +30,9 @@ records=[
     Lecture(course_id="in710001", class_room="D208", day="Friday", time="8:00"),
     Lecture(course_id="in719001", class_room="D313", day="Tuesday", time="10:00"),
     Lecture(course_id="in719001", class_room="D313", day="Friday", time="10:00"),
+    Lecture(course_id="in700001", class_room="D207", day="Monday", time="8:00"),
+    Lecture(course_id="in721000", class_room="D201", day="Tuesday", time="15:00"),
+    Lecture(course_id="in721000", class_room="D201", day="Thursday", time="13:00"),
     # Sam's courses: oosd, proj1, proj2, virt, sysadmin, mobile, ads
     StudentCourse(student_id=11005725, course_id="in700002"),
     StudentCourse(student_id=11005725, course_id="in715999"),
